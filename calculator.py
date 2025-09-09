@@ -21,7 +21,7 @@ def clear():
 def calculate():
     try:
         expression = entry.get()
-        result = eval(expression, {"__builtins__": None}, math.__dict__)  # নিরাপদ eval
+        result = eval(expression, {"__builtins__": None}, math.__dict__) 
         entry.delete(0, tk.END)
         entry.insert(0, str(result))
     except Exception:
@@ -53,3 +53,4 @@ btn_clear = tk.Button(root, text="C", width=32, height=2, command=clear, font=("
 btn_clear.grid(row=6, column=0, columnspan=5, pady=5)
 
 root.mainloop()
+
